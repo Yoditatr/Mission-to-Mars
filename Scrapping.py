@@ -3,7 +3,6 @@ from splinter import Browser
 from bs4 import BeautifulSoup as soup
 import pandas as pd
 import datetime as dt
-# from scraping import scrape
 from webdriver_manager.chrome import ChromeDriverManager
 
 
@@ -13,6 +12,7 @@ def scrape_all():
     browser = Browser('chrome', **executable_path, headless=True)
 
     news_title, news_paragraph = mars_news(browser)
+
     # Run all scraping functions and store results in a dictionary
     data = {
         "news_title": news_title,
@@ -101,3 +101,4 @@ if __name__ == "__main__":
 
     # If running as script, print scraped data
     print(scrape_all())
+It's also a good idea at this point to run 
